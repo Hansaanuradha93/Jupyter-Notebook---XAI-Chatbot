@@ -18,15 +18,17 @@ __pycache__/
 .venv/
 venv/
 env/
+ENV/
 
 # -----------------------
 # Jupyter Notebook
 # -----------------------
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/*
 *.ipynb_checkpoints
 
 # -----------------------
-# VSCode / IDE files
+# VSCode / Editors
 # -----------------------
 .vscode/
 .idea/
@@ -38,18 +40,37 @@ env/
 *.log
 
 # -----------------------
-# Optional: ignore large model binaries
+# Ignore common large artifacts,
+# BUT KEEP MODEL FILES
 # -----------------------
 *.h5
 *.hdf5
+*.onnx
 *.pt
 *.pth
-*.onnx
-*.pkl
+*.joblib
 *.sav
 
+# ---- DO NOT IGNORE THESE MODEL FILES ----
+!model.pkl
+!preprocess.pkl
+!explainer.pkl
+
 # -----------------------
-# ⚠ KEEP datasets folder
+# Datasets folder (keep CSVs)
 # -----------------------
-# Do NOT ignore /datasets
-# We want datasets/*.csv to stay in the repo.
+# Do NOT ignore datasets/
+# keep all CSVs inside
+datasets/
+!datasets/**/*.csv
+!datasets/*.csv
+
+# -----------------------
+# Node / frontend junk (if any)
+# -----------------------
+node_modules/
+dist/
+.next/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,56 @@
+# -----------------------
+# OS files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Python cache
+# -----------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# -----------------------
+# Virtual environments
+# -----------------------
+.venv/
+venv/
+env/
+
+# -----------------------
+# Jupyter Notebook
+# -----------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------------
+# VSCode / IDE files
+# -----------------------
+.vscode/
+.idea/
+*.swp
+
+# -----------------------
+# Logs
+# -----------------------
+*.log
+
+# -----------------------
+# Optional: ignore large model binaries
+# -----------------------
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.sav
+
+# -----------------------
+# ⚠ KEEP datasets folder
+# -----------------------
+# Do NOT ignore /datasets
+# We want datasets/*.csv to stay in the repo.
